@@ -1,15 +1,4 @@
 
-.bg-container{
-  background-image: url("https://forum.boardgamearena.com/viewtopic.php?t=17511");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position:center center;
-  width: 100%;
-  height: 100%;
-  border: 5px solid red;
-  box-sizing: border-box;
-  }
-
 *, *::before, *::after{
   box-sizing: border-box;
 }
