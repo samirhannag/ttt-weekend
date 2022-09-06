@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'Segment14'; /*a name to be used later*/
-  src: url('fonts/Segment14.otf'); /*URL to font*/
+  font-family: 'Segment14'; 
+  src: url('fonts/Segment14.otf'); 
 }
 
 body {
@@ -13,7 +13,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
   font-family: 'Segment14';
   }
 
@@ -27,7 +26,6 @@ section.board {
  grid-gap: 0vmin;
 }
 div {
- /* background-color: black; */
  border: 3px solid black;
  font-size: 9vmin;
  text-align: center;
@@ -39,3 +37,15 @@ button {
   font-family: 'Segment14';
   font-size: 20px;
   margin: 20px;
+}
+
+.bg-container{
+background-image: url("https://forum.boardgamearena.com/viewtopic.php?t=17511");
+background-size: cover;
+background-repeat: no-repeat;
+background-position:center center;
+width: 100%;
+height: 100%;
+border: 5px solid red;
+box-sizing: border-box;
+}
