@@ -9,19 +9,28 @@
 	<title>Tic Tac Toe</title>
 </head>
 <body>
-	<h1>Tic-Tac-Toe</h1>
-	<h2 id="message">Message</h2>
+	<h1 class="animated zoomInDown delay-1s">Tic-Tac-Toe</h1>
+	<h2 id="message"></h2>
 
-	<section class="board">
-		<div id="sq0"></div>
-		<div id="sq1"></div>
-		<div id="sq2"></div>
-		<div id="sq3"></div>
-		<div id="sq4"></div>
-		<div id="sq5"></div>
-		<div id="sq6"></div>
-		<div id="sq7"></div>
-		<div id="sq8"></div>
-	</section>    
+
+
+	<section class="board div" id="board">
+			<div class="div animated zoomInDown sq0" id="sq0"></div>
+			<div class="div animated zoomInDown sq1" id="sq1"></div>
+		 <div class="div animated zoomInDown sq2" id="sq2"></div>
+		 <div class="div animated zoomInDown sq3" id="sq3"></div>
+		 <div class="div animated zoomInDown sq4" id="sq4"></div>
+		 <div class="div animated zoomInDown sq5" id="sq5"></div>
+		 <div class="div animated zoomInDown sq6" id="sq6"></div>
+		 <div class="div animated zoomInDown sq7" id="sq7"></div>
+		 <div class="div animated zoomInDown sq8" id="sq8"></div>
+ </section>
+ <h2>Select colors below</h2>
+ 
+ <section>
+		 <button class="hvr-bounce-in color jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" id="colorA">X's Color</button>  <button class="hvr-bounce-in color jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" id="colorB">O's Color</button>
+ </section>
+ 
+ <button class="reset hvr-outline-in" name="button" onclick='location.reload();' id="button">Reset Game</button>
 </body>
 </html>
