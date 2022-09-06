@@ -30,7 +30,7 @@ function init() {
   setTimeout(function () { audioStart.play(); }, 1000);
   setTimeout(function () { audioStart.play(); }, 3000);
   turn = 1;
-  gameStatus.textContent = "It is X's turn";
+  gameStatus.textContent = "Choose a side!";
 }
 function onClick(evt) {
   let squareIdx = parseInt(evt.target.id.replace('sq', ''));
@@ -42,7 +42,7 @@ function getWinner() {
   if (board[0] + board[1] + board[2] === 3 || board[3] + board[4] + board[5] === 3 || board[6] + board[7] + board[8] === 3 ||
     board[0] + board[3] + board[6] === 3 || board[1] + board[4] + board[7] === 3 || board[2] + board[5] + board[8] === 3 ||
     board[0] + board[4] + board[8] === 3 || board[2] + board[4] + board[6] === 3) {
-    gameStatus.textContent = "X wins the game";
+    gameStatus.textContent = "Congrats X wins the game!";
     setTimeout(function () { audioWin.play(); }, 1000);
     document.getElementById("board").className += " hvr-buzz-out";
     confetti.start(1500);
@@ -51,7 +51,7 @@ function getWinner() {
   if (board[0] + board[1] + board[2] === -3 || board[3] + board[4] + board[5] === -3 || board[6] + board[7] + board[8] === -3 ||
     board[0] + board[3] + board[6] === -3 || board[1] + board[4] + board[7] === -3 || board[2] + board[5] + board[8] === -3 ||
     board[0] + board[4] + board[8] === -3 || board[2] + board[4] + board[6] === -3) {
-    gameStatus.textContent = "O wins the game";
+    gameStatus.textContent = "Congrats O wins the game!";
     setTimeout(function () { audioWin.play(); }, 1000);
     document.getElementById("board").className += " hvr-buzz-out";
     confetti.start(1500);
@@ -67,19 +67,19 @@ function render(squareIdx) {
       setLetter.textContent = "X";
       audioX.play();
       document.getElementById(`sq${squareIdx}`).style.backgroundColor = document.getElementById("colorA").style.backgroundColor;
-      gameStatus.textContent = "It is O's turn"
+      gameStatus.textContent = "Player O's turn"
     } else {
       setLetter.textContent = "O";
       audioO.play();
       document.getElementById(`sq${squareIdx}`).style.backgroundColor = document.getElementById("colorB").style.backgroundColor;
-      gameStatus.textContent = "It is X's turn"
+      gameStatus.textContent = "Player X's turn"
     }
   }
   turn *= -1;
   getWinner();
   turnCount++;
   if (turnCount === 10 && isWinner === false) {
-    gameStatus.textContent = "This game is a draw";
+    gameStatus.textContent = "Its a Tie";
     document.getElementById("board").className += " hvr-buzz-out";
   }
 }
